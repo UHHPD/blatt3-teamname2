@@ -69,7 +69,10 @@ int main() {
     fout3.close();
 
     double Lambda = prob(messwerte, 3.11538)/norm(messwerte);
-    cout<<"L(u): "<<prob(messwerte, 3.11538)<<"\n";
+    cout<<"L(mu): "<<prob(messwerte, 3.11538)<<"\n";
+    cout<<norm(messwerte)<<"\n";
     cout<<"Lambda: " << Lambda << "\n";
+    cout<< "-2*ln(Lambda):" << -2*log(Lambda) <<"\n";
     cout<<"z = "<< (-2*log(Lambda)-233)/sqrt(466) << "\n";
+    
 }
