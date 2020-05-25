@@ -34,6 +34,8 @@ double norm(vector<int> daten)
 
 int main() {
 
+    
+
     ifstream fin("datensumme.txt");
     vector<int> messwerte;
     int n_i;
@@ -67,6 +69,7 @@ int main() {
     fout3.close();
 
     double Lambda = prob(messwerte, 3.11538)/norm(messwerte);
+    cout<<"L(u): "<<prob(messwerte, 3.11538)<<"\n";
     cout<<"Lambda: " << Lambda << "\n";
-    cout<<"z="<< (-2*log(Lambda)-233)/sqrt(466) << "\n";
+    cout<<"z = "<< (-2*log(Lambda)-233)/sqrt(466) << "\n";
 }
