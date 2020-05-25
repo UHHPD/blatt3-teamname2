@@ -15,7 +15,7 @@ double poisson(double mu, int k) {
 int main() {
   // Datei laden
     ifstream fin("datensumme.txt");
-    ofstream fout("hist.txt");
+    ofstream fout("histpoi.txt");
 
   // Vektor füllen
     vector<int> zaehler(11);
@@ -29,7 +29,7 @@ int main() {
   // Vektor ausgeben
   for (int i=0; i<zaehler.size(); ++i)
   {
-    double wahr = poisson(i, 3.11538);
+    double wahr = poisson(3.11538, i);
     fout << i << "\t" << zaehler[i] << "\t" << 234*wahr;
     if (i<zaehler.size()-1)
     {
